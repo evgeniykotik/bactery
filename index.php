@@ -75,7 +75,7 @@ class BacteriesProcessor
 class ValidField
 {
     const NAME = "/^[a-z]+$/i";
-    const TELEPHONE = "/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/";
+    const TELEPHONE = "/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){8,20}(\s*)?$/";
 }
 
 $name = $_POST["name"];
