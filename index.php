@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 class Errors
 {
     static $error = array("errorName" => "Введите правильно имя (только буквы)",
-        "errorTelephone" => "Введите номер телефона в формате: +375292296921",
+        "errorTelephone" => "Неверно введен номер телефона",
         "errorEmail" => "Введите верно Email",
         "errorTime" => "Положительное число больше ноля");
 }
@@ -75,7 +75,7 @@ class BacteriesProcessor
 class ValidField
 {
     const NAME = "/^[a-z]+$/i";
-    const TELEPHONE = "/^\s*\+?375((33\d{7})|(29\d{7})|(44\d{7}|)|(25\d{7}))\s*$/";
+    const TELEPHONE = "/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/";
 }
 
 $name = $_POST["name"];
